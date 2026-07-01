@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Product Details | US Lifescience</title>
+    <meta name="description" content="Read full therapeutic information for our pharmaceutical prescription formulations, including clinical composition, dosage, and packaging.">
+    <meta name="keywords" content="US Lifescience, prescription medicines, medical products, dosage details">
+    <meta name="author" content="Talvyyo">
+    
+    <link rel="shortcut icon" href="images/logo/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- 1. Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-logo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <span><span class="blue-text">US</span> <span class="green-text">Lifescience</span></span>
+        </div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- 2. Header & Sticky Navbar -->
+    <header>
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo/logo.jpg" alt="US Lifescience Logo" style="height: 50px; width: auto; object-fit: contain;">
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html#therapeutic">Therapeutic Areas</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="quality.html">Quality</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="tel:+919003506835" class="btn btn-primary btn-sm"><i class="fa-solid fa-phone"></i> Call Now</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Inner Banner / Breadcrumbs -->
+    <section class="inner-banner">
+        <div class="container">
+            <div class="inner-banner-content">
+                <h1>Product Details</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem; color: var(--muted-text);"></i>
+                    <a href="products.html">Products</a>
+                    <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem; color: var(--muted-text);"></i>
+                    <span id="breadcrumbActive">Product Name</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Product Details Presentation -->
+    <section class="section">
+        <div class="container">
+            <div class="product-details-grid">
+                
+                <!-- Left: Graphic / Image Box -->
+                <div class="product-details-image reveal-left">
+                    <img id="prodImage" alt="" style="display: none;">
+                    <div class="product-placeholder-svg">
+                        <i id="prodPlaceholderIcon" class="fa-solid fa-pills" style="font-size: 5rem; margin-bottom: 20px;"></i>
+                        <h2 id="prodPlaceholderName" style="color: var(--primary-blue); font-size: 2.2rem;">Product</h2>
+                        <p id="prodPlaceholderCategory" style="opacity: 0.7; font-weight: 500; font-size: 1rem;">Category</p>
+                    </div>
+                </div>
+                
+                <!-- Right: Detailed Specifications -->
+                <div class="product-details-info reveal-right">
+                    <span id="prodCategory" class="product-details-category">Category</span>
+                    <h2 id="prodName">Product Name</h2>
+                    
+                    <p id="prodDescription" style="font-size: 1.1rem; margin-bottom: 30px; line-height: 1.7;">Description</p>
+                    
+                    <!-- Composition -->
+                    <div class="product-detail-section">
+                        <h4>Composition</h4>
+                        <p id="prodComposition" style="font-weight: 600; color: var(--primary-blue);">Composition</p>
+                    </div>
+                    
+                    <!-- Indications -->
+                    <div class="product-detail-section">
+                        <h4>Indications</h4>
+                        <p id="prodIndications">Indications</p>
+                    </div>
+                    
+                    <!-- Benefits -->
+                    <div class="product-detail-section">
+                        <h4>Key Benefits</h4>
+                        <p id="prodBenefits">Key Benefits</p>
+                    </div>
+                    
+                    <!-- Dosage -->
+                    <div class="product-detail-section">
+                        <h4>Recommended Dosage</h4>
+                        <p id="prodDosage">Recommended Dosage</p>
+                    </div>
+                    
+                    <!-- Packaging -->
+                    <div class="product-detail-section">
+                        <h4>Packaging Presentation</h4>
+                        <p id="prodPackaging" style="font-weight: 600; color: var(--dark-text);">Packaging</p>
+                    </div>
+                    
+                    <!-- Disclaimer -->
+                    <div class="product-disclaimer-box">
+                        <p><i class="fa-solid fa-triangle-exclamation" style="margin-right: 8px;"></i> <span id="prodDisclaimer">Disclaimer</span></p>
+                    </div>
+                    
+                    <div class="product-detail-actions">
+                        <a href="#enquiry-form-section" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Send Enquiry</a>
+                        <a href="tel:+919003506835" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call Doctor Hotline</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Product Enquiry Form Segment -->
+    <section id="enquiry-form-section" class="section section-bg-alt">
+        <div class="container">
+            <div class="section-header reveal" style="max-width: 600px;">
+                <h2 id="formHeader">Enquire About Product</h2>
+                <p>Submit your clinic or pharmacy requirements below to receive packaging specifications and commercial trade pricing.</p>
+            </div>
+            
+            <div class="contact-form-panel reveal" style="max-width: 700px; margin: 0 auto;">
+                
+                <!-- Success/Error Messages -->
+                <div id="formMessage" class="form-message"></div>
+                
+                <form id="enquiryForm" method="POST" novalidate>
+                    <!-- Security Token (Loaded dynamically by JS) -->
+                    <input type="hidden" name="csrf_token" value="">
+                    
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Dr. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hospital">Hospital / Clinic / Pharmacy *</label>
+                            <input type="text" id="hospital" name="hospital" class="form-control" placeholder="Apollo Hospital / City Pharmacy" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 98765 43210" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="name@domain.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" class="form-control" value="" readonly required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message / Requirements *</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Please specify your distribution requirement details here..." required></textarea>
+                    </div>
+                    
+                    <!-- Math Captcha -->
+                    <div class="captcha-container">
+                        <div class="captcha-question">Solve: <span id="captchaNum1">?</span> + <span id="captchaNum2">?</span> =</div>
+                        <input type="number" id="captcha" name="captcha" class="captcha-input" placeholder="?" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fa-solid fa-paper-plane"></i> Submit Product Enquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Related Products Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Related Products</h2>
+                <p>Browse other relevant pharmaceutical formulations from our standard medicine catalog.</p>
+            </div>
+            
+            <div id="relatedGrid" class="product-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <!-- Dynamically Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="logo" style="margin-bottom: 20px;">
+                        <a href="index.html">
+                            <img src="images/logo/logo.jpg" alt="US Lifescience Logo" style="height: 50px; width: auto; object-fit: contain;">
+                        </a>
+                    </div>
+                    <p>Committed to quality prescription medicines that empower healthcare professionals and improve patient outcomes.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#therapeutic">Therapeutic Areas</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="quality.html">Quality</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Our Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html">Fitness</a></li>
+                        <li><a href="products.html">Ultra Fast SP</a></li>
+                        <li><a href="products.html">Gastro-Zone DSR</a></li>
+                        <li><a href="products.html">Amoxus-625</a></li>
+                        <li><a href="products.html">Levocetus-M</a></li>
+                        <li><a href="products.html">Joint Guard</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>No.14-B, Venkateshwara Nagar, 1st Main Road, Kishkindha Road, West Tambaram, Chennai – 600045</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <a href="tel:+919003506835" style="color: inherit;">+91 9003506835</a><br>
+                                <a href="tel:+919786244210" style="color: inherit;">+91 9786244210</a><br>
+                                <a href="tel:+919791832342" style="color: inherit;">+91 9791832342</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:uslifescience79@gmail.com" style="color: inherit;">uslifescience79@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 US Lifescience. All Rights Reserved.</p>
+                <p>Designed & Developed by <a href="#" target="_blank" rel="noopener">Talvyyo</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 8. Floating Buttons -->
+    <div class="floating-actions">
+        <a href="tel:+919003506835" class="float-btn float-phone" aria-label="Call Us">
+            <i class="fa-solid fa-phone"></i>
+            <span class="float-tooltip">Call Support</span>
+        </a>
+        <a href="https://wa.me/919003506835" class="float-btn float-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp Chat">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="float-tooltip">WhatsApp Live</span>
+        </a>
+        <a href="mailto:uslifescience79@gmail.com" class="float-btn float-email" aria-label="Email Enquiry">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="float-tooltip">Send Email</span>
+        </a>
+        <a href="#" class="float-btn float-top" aria-label="Back to Top">
+            <i class="fa-solid fa-arrow-up"></i>
+            <span class="float-tooltip">Back to Top</span>
+        </a>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="js/products-data.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Render details dynamically using productsData client database -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = parseInt(urlParams.get('id'), 10) || 0;
+            
+            // Redirect to products catalog page if invalid or missing ID
+            if (productId <= 0 || !productsData[productId]) {
+                window.location.href = 'products.html';
+                return;
+            }
+            
+            const product = productsData[productId];
+            
+            // 1. Update Title and Active Breadcrumb
+            document.title = `${product.name} | Composition, Dosage & Details | US Lifescience`;
+            document.getElementById('breadcrumbActive').innerText = product.name;
+            
+            // 2. Set details markup
+            document.getElementById('prodName').innerText = product.name;
+            document.getElementById('prodCategory').innerText = product.category;
+            document.getElementById('prodDescription').innerText = product.description;
+            document.getElementById('prodComposition').innerText = product.composition;
+            document.getElementById('prodIndications').innerText = product.indications;
+            document.getElementById('prodBenefits').innerText = product.benefits;
+            document.getElementById('prodDosage').innerText = product.dosage;
+            document.getElementById('prodPackaging').innerText = product.packaging;
+            document.getElementById('prodDisclaimer').innerText = product.disclaimer;
+            
+            // Set image properties
+            const prodImg = document.getElementById('prodImage');
+            prodImg.onload = () => {
+                prodImg.style.display = 'block';
+            };
+            prodImg.onerror = () => {
+                prodImg.style.display = 'none';
+            };
+            prodImg.src = `images/products/${product.slug}.jpeg`;
+            prodImg.alt = product.name;
+            
+            // Set dynamic icon mapping for placeholder
+            let iconClass = 'fa-pills';
+            if (productId === 1 || productId === 5 || productId === 13) {
+                iconClass = 'fa-capsules';
+            } else if (productId === 9) {
+                iconClass = 'fa-bottle-droplet';
+            } else if (productId === 10) {
+                iconClass = 'fa-syringe';
+            } else if (productId === 12) {
+                iconClass = 'fa-eye-dropper';
+            } else if (productId === 14) {
+                iconClass = 'fa-prescription-bottle-medical';
+            }
+            
+            const placeholderIcon = document.getElementById('prodPlaceholderIcon');
+            placeholderIcon.className = `fa-solid ${iconClass}`;
+            document.getElementById('prodPlaceholderName').innerText = product.name;
+            document.getElementById('prodPlaceholderCategory').innerText = product.category;
+            
+            // 3. Set Enquiry Form Pre-fills
+            document.getElementById('formHeader').innerText = `Enquire About ${product.name}`;
+            document.getElementById('subject').value = `Product enquiry: ${product.name} (ID: ${productId})`;
+            document.getElementById('message').value = `Dear US Lifescience Team,\n\nI would like to receive trade quotation and distribution availability details for ${product.name}.\n\nThank you.`;
+            
+            // 4. Render Related Products Grid
+            const relatedGrid = document.getElementById('relatedGrid');
+            const relatedList = [];
+            const totalProducts = Object.keys(productsData).length;
+            const adjacentOffsets = [-1, 1, 2, -2];
+            
+            for (const offset of adjacentOffsets) {
+                let targetId = productId + offset;
+                if (targetId < 1) {
+                    targetId = totalProducts + targetId;
+                } else if (targetId > totalProducts) {
+                    targetId = targetId - totalProducts;
+                }
+                
+                if (targetId !== productId && productsData[targetId] && !relatedList.includes(targetId)) {
+                    relatedList.push(targetId);
+                    if (relatedList.length >= 3) {
+                        break;
+                    }
+                }
+            }
+            
+            let relatedHtml = '';
+            let delayIdx = 1;
+            relatedList.forEach(relId => {
+                const relProduct = productsData[relId];
+                let relIconClass = 'fa-pills';
+                if (relId === 1 || relId === 5 || relId === 13) {
+                    relIconClass = 'fa-capsules';
+                } else if (relId === 9) {
+                    relIconClass = 'fa-bottle-droplet';
+                } else if (relId === 10) {
+                    relIconClass = 'fa-syringe';
+                } else if (relId === 12) {
+                    relIconClass = 'fa-eye-dropper';
+                } else if (relId === 14) {
+                    relIconClass = 'fa-prescription-bottle-medical';
+                }
+                
+                const shortenedCat = relProduct.category.replace('Ophthalmic', 'Ophth.').split(' ')[0];
+                const shortenedComp = relProduct.composition.length > 45 ? relProduct.composition.substring(0, 45) + '...' : relProduct.composition;
+                
+                relatedHtml += `
+                    <div class="product-card reveal delay-${delayIdx}">
+                        <div class="product-image">
+                            <img src="images/products/${relProduct.slug}.jpeg" alt="${relProduct.name}" onerror="this.style.display='none';">
+                            <div class="product-placeholder-svg">
+                                <i class="fa-solid ${relIconClass}"></i>
+                                <span>${relProduct.name}</span>
+                            </div>
+                            <span class="product-category-tag">${shortenedCat}</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>${relProduct.name}</h3>
+                            <div class="product-composition">${shortenedComp}</div>
+                            <p class="product-desc">${relProduct.description}</p>
+                            <div class="product-actions">
+                                <a href="product-details.html?id=${relId}" class="btn btn-secondary btn-sm">View Details</a>
+                                <a href="contact.html?subject=Enquiry+regarding+${encodeURIComponent(relProduct.name)}+Tablets" class="btn btn-green btn-sm">Enquiry</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                delayIdx++;
+            });
+            relatedGrid.innerHTML = relatedHtml;
+        });
+    </script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

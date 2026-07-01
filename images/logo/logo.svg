@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0078D7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#53B635;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Circular glowing background -->
+  <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.3" />
+  
+  <!-- Medical Cross / DNA Blend -->
+  <g transform="translate(50, 50) scale(0.9)">
+    <!-- Vertical Cross Element -->
+    <rect x="-8" y="-30" width="16" height="60" rx="4" fill="#0078D7" />
+    <!-- Horizontal Cross Element -->
+    <rect x="-30" y="-8" width="60" height="16" rx="4" fill="#0078D7" />
+    
+    <!-- DNA double helix nodes integrated in the cross -->
+    <circle cx="-18" cy="-18" r="5" fill="#53B635" />
+    <circle cx="18" cy="18" r="5" fill="#53B635" />
+    <path d="M -18 -18 Q 0 0 18 18" stroke="#53B635" stroke-width="3" stroke-dasharray="2 2" fill="none" />
+    
+    <circle cx="18" cy="-18" r="5" fill="#53B635" />
+    <circle cx="-18" cy="18" r="5" fill="#53B635" />
+    <path d="M 18 -18 Q 0 0 -18 18" stroke="#53B635" stroke-width="3" stroke-dasharray="2 2" fill="none" />
+    
+    <!-- Center core pulse -->
+    <circle cx="0" cy="0" r="6" fill="#FFFFFF" />
+    <circle cx="0" cy="0" r="3" fill="#53B635" />
+  </g>
+</svg>

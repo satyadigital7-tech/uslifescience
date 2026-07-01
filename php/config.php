@@ -1,0 +1,207 @@
+<?php
+/**
+ * US Lifescience - Configuration File
+ * Contains SMTP settings, site settings, and the complete 14-product database.
+ */
+
+// Basic Settings
+define('SITE_NAME', 'US Lifescience');
+define('CONTACT_EMAIL', 'uslifescience79@gmail.com');
+define('CONTACT_PHONE_1', '+91 9003506835');
+define('CONTACT_PHONE_2', '+91 9786244210');
+define('CONTACT_PHONE_3', '+91 9791832342');
+define('CONTACT_WHATSAPP', '+919003506835');
+define('OFFICE_ADDRESS', 'No.14-B, Venkateshwara Nagar, 1st Main Road, Kishkindha Road, West Tambaram, Chennai – 600045');
+
+// SMTP Settings for PHPMailer
+define('SMTP_HOST', 'smtp.gmail.com'); // Update with your SMTP host
+define('SMTP_USER', 'uslifescience79@gmail.com'); // Update with your SMTP username
+define('SMTP_PASS', ''); // Update with your SMTP password
+define('SMTP_PORT', 587); // 587 for TLS, 465 for SSL
+define('SMTP_SECURE', 'tls'); // 'tls' or 'ssl'
+
+// Product Database
+$products = [
+    1 => [
+        'id' => 1,
+        'name' => 'Fitness',
+        'slug' => 'fitness',
+        'category' => 'Nutritional Supplement',
+        'composition' => 'Multivitamins, Multiminerals, Antioxidants & Ginseng Capsules',
+        'indications' => 'General weakness, physical fatigue, convalescence, mental stress, and nutritional deficiencies.',
+        'benefits' => 'Boosts daily energy levels, strengthens the immune system, improves mental alertness, and supports overall vitality.',
+        'dosage' => '1 capsule daily after a meal or as directed by the physician.',
+        'packaging' => '3 x 10 Capsules in a Box (Blister Pack)',
+        'disclaimer' => 'Warning: To be sold by retail on the prescription of a Registered Medical Practitioner only.',
+        'description' => 'A premium daily health supplement designed to replenish vital nutrients, combat fatigue, and support a healthy active lifestyle.'
+    ],
+    2 => [
+        'id' => 2,
+        'name' => 'Ultra Fast SP',
+        'slug' => 'ultra-fast-sp',
+        'category' => 'Analgesic & Anti-inflammatory',
+        'composition' => 'Aceclofenac 100mg + Paracetamol 325mg + Serratiopeptidase 15mg Tablets',
+        'indications' => 'Severe painful inflammatory conditions like osteoarthritis, rheumatoid arthritis, ankylosing spondylitis, post-operative pain, and sports injuries.',
+        'benefits' => 'Provides rapid pain relief, reduces localized swelling and fluid retention, and accelerates tissue repair.',
+        'dosage' => '1 tablet twice daily after meals or as advised by the doctor.',
+        'packaging' => '10 x 10 Tablets in a Box (Alu-Alu Pack)',
+        'disclaimer' => 'Warning: To be sold by retail on the prescription of a Registered Medical Practitioner only.',
+        'description' => 'A powerful triple-action pain-relief and anti-inflammatory formulation that addresses both pain and inflammatory edema.'
+    ],
+    3 => [
+        'id' => 3,
+        'name' => 'Ultrafast P',
+        'slug' => 'ultra-fast-p',
+        'category' => 'Analgesic & Antipyretic',
+        'composition' => 'Aceclofenac 100mg + Paracetamol 325mg Tablets',
+        'indications' => 'Mild to moderate pain, fever, headache, dental pain, backache, and muscle cramps.',
+        'benefits' => 'Effective dual action for fast pain relief and fever reduction with an excellent safety and tolerability profile.',
+        'dosage' => '1 tablet twice a day or as directed by the physician.',
+        'packaging' => '10 x 10 Tablets in a Box (Blister Pack)',
+        'disclaimer' => 'Warning: To be sold by retail on the prescription of a Registered Medical Practitioner only.',
+        'description' => 'A trusted anti-inflammatory and analgesic tablet that provides quick comfort from aches and mild fevers.'
+    ],
+    4 => [
+        'id' => 4,
+        'name' => 'Gastro-Zone',
+        'slug' => 'gastro-zone',
+        'category' => 'Antacid & Anti-ulcerant',
+        'composition' => 'Pantoprazole Sodium Gastro-resistant Tablets IP 40mg',
+        'indications' => 'Gastroesophageal Reflux Disease (GERD), peptic ulcers, hyperacidity, acid-related indigestion, and drug-induced gastritis.',
+        'benefits' => 'Effectively controls gastric acid secretion, provides prolonged relief from heartburn, and promotes mucosal healing.',
+        'dosage' => '1 tablet daily in the morning before food (on an empty stomach) or as directed.',
+        'packaging' => '10 x 10 Tablets in a Box (Alu-Alu Pack)',
+        'disclaimer' => 'Warning: To be sold by retail on the prescription of a Registered Medical Practitioner only.',
+        'description' => 'A leading proton pump inhibitor (PPI) that offers 24-hour relief from excessive stomach acid and gastric discomfort.'
+    ],
+    5 => [
+        'id' => 5,
+        'name' => 'Gastro-Zone DSR',
+        'slug' => 'gastro-zone-dsr',
+        'category' => 'Antacid & Antiemetic',
+        'composition' => 'Pantoprazole Sodium IP 40mg + Domperidone IP 30mg (Sustained Release) Capsules',
+        'indications' => 'Hyperacidity, GERD, acid reflux associated with nausea, vomiting, dyspepsia, gas, and abdominal bloating.',
+        'benefits' => 'Controls acid reflux while preventing nausea, sustained-release formulation ensures long-lasting action, improves gut motility.',
+        'dosage' => '1 capsule daily in the morning before breakfast, or as prescribed.',
+        'packaging' => '10 x 10 Capsules in a Box (Alu-Alu Pack)',
+        'disclaimer' => 'Warning: To be sold by retail on the prescription of a Registered Medical Practitioner only.',
+        'description' => 'A combined sustained-release capsule designed for superior management of acid reflux accompanied by nausea or vomiting.'
+    ],
+    6 => [
+        'id' => 6,
+        'name' => 'Amoxus-625',
+        'slug' => 'amoxus-625',
+        'category' => 'Antibiotic',
+        'composition' => 'Amoxycillin 500mg + Clavulanic Acid 125mg Tablets IP',
+        'indications' => 'Upper and lower respiratory tract infections (bronchitis, sinusitis), urinary tract infections, skin & soft tissue infections, and dental abscesses.',
+        'benefits' => 'Broad-spectrum antibacterial activity, successfully overcomes beta-lactamase resistance for high clinical efficacy.',
+        'dosage' => '1 tablet twice or thrice daily depending on severity, or as prescribed.',
+        'packaging' => '1 x 10 Tablets (Alu-Alu Pack)',
+        'disclaimer' => 'Warning: To be sold by retail on the prescription of a Registered Medical Practitioner only.',
+        'description' => 'A gold-standard co-amoxiclav antibiotic formulation for treating tough bacterial infections in adults and children.'
+    ],
+    7 => [
+        'id' => 7,
+        'name' => 'Levocetus-M',
+        'slug' => 'levocetus-m',
+        'category' => 'Antihistamine & Antiallergic',
+        'composition' => 'Levocetirizine Dihydrochloride 5mg + Montelukast Sodium 10mg Tablets',
+        'indications' => 'Allergic rhinitis, seasonal allergies, hay fever, asthma prevention, skin allergies, and itching.',
+        'benefits' => 'Effectively blocks histamine and leukotrienes to stop sneezing, runny nose, congestion, and itchy throat without major drowsiness.',
+        'dosage' => '1 tablet daily at bedtime, or as directed by the physician.',
+        'packaging' => '10 x 10 Tablets in a Box (Alu-Alu Pack)',
+        'disclaimer' => 'Warning: To be sold by retail on the prescription of a Registered Medical Practitioner only.',
+        'description' => 'A dual-action anti-allergic formulation providing robust 24-hour relief from respiratory and dermatological allergies.'
+    ],
+    8 => [
+        'id' => 8,
+        'name' => 'Cefbetus-Fort',
+        'slug' => 'cefbetus-fort',
+        'category' => 'Antibiotic / Cephalosporin',
+        'composition' => 'Cefpodoxime Proxetil 200mg + Clavulanic Acid 125mg Tablets',
+        'indications' => 'Severe acute bacterial infections, pneumonia, chronic bronchitis exacerbations, acute otitis media, and complicated UTIs.',
+        'benefits' => 'High-potency third-generation cephalosporin, clavulanic acid prevents enzymatic degradation by resistant bacteria.',
+        'dosage' => '1 tablet twice daily after meals, or as prescribed by the physician.',
+        'packaging' => '10 x 10 Tablets in a Box (Alu-Alu Pack)',
+        'disclaimer' => 'Warning: To be sold by retail on the prescription of a Registered Medical Practitioner only.',
+        'description' => 'An advanced cephalosporin combination offering broad protection against resistant pathogens.'
+    ],
+    9 => [
+        'id' => 9,
+        'name' => 'Zopitus',
+        'slug' => 'zopitus',
+        'category' => 'Respiratory / Cough Formula',
+        'composition' => 'Levosalbutamol 1mg + Ambroxol Hydrochloride 30mg + Guaiphenesin 50mg per 5ml Syrup',
+        'indications' => 'Productive cough, chest congestion, and wheezing associated with bronchitis, asthma, and COPD.',
+        'benefits' => 'Clears thick mucus, dilates airways for easier breathing, and relieves throat irritation effectively.',
+        'dosage' => 'Adults: 5-10 ml, Children: 2.5-5 ml, three times a day, or as advised by the doctor.',
+        'packaging' => '100 ml Pet Bottle with Measuring Cap',
+        'disclaimer' => 'Warning: To be sold by retail on the prescription of a Registered Medical Practitioner only.',
+        'description' => 'A scientifically formulated expectorant syrup to ease coughing and relieve congestion by relaxing the airways and thinning phlegm.'
+    ],
+    10 => [
+        'id' => 10,
+        'name' => 'Ultrafast-AQ',
+        'slug' => 'ultrafast-aq',
+        'category' => 'Injectable Analgesic',
+        'composition' => 'Diclofenac Sodium 75mg / 1ml Injection (Aqua Base)',
+        'indications' => 'Acute severe pain, renal colic, biliary colic, post-operative surgical pain, severe migraine attacks, and acute gout.',
+        'benefits' => 'Fast-acting aqueous formulation with minimal injection-site pain, producing rapid pain relief within minutes.',
+        'dosage' => 'For deep Intramuscular (IM) injection only, under direct supervision of medical staff.',
+        'packaging' => '10 x 1ml Ampoules',
+        'disclaimer' => 'Warning: To be sold by retail on the prescription of a Registered Medical Practitioner only.',
+        'description' => 'An aqueous diclofenac injection designed to deliver rapid, systemic relief from acute, excruciating pain.'
+    ],
+    11 => [
+        'id' => 11,
+        'name' => 'Camping',
+        'slug' => 'camping',
+        'category' => 'Calcium & Vitamin Supplement',
+        'composition' => 'Calcium Carbonate 1250mg (Elemental Calcium 500mg) + Vitamin D3 (Cholecalciferol) 250 IU Tablets',
+        'indications' => 'Osteoporosis, osteomalacia, calcium deficiency, bone fractures, and support during pregnancy & lactation.',
+        'benefits' => 'Improves bone mineral density, enhances calcium absorption, and maintains skeletal and teeth strength.',
+        'dosage' => '1 tablet daily after food, or as recommended by the doctor.',
+        'packaging' => '10 x 15 Tablets in a Box (Blister Pack)',
+        'disclaimer' => 'Warning: Keep out of reach of children.',
+        'description' => 'A daily calcium and vitamin D3 supplement essential for strong bones, healthy joint articulation, and systemic health.'
+    ],
+    12 => [
+        'id' => 12,
+        'name' => 'Ketrolux',
+        'slug' => 'ketrolux',
+        'category' => 'Ophthalmic / Pain Relief',
+        'composition' => 'Ketorolac Tromethamine 0.5% w/v Ophthalmic Solution',
+        'indications' => 'Post-operative inflammation, pain reduction after cataract extraction, and relief of seasonal allergic conjunctivitis symptoms.',
+        'benefits' => 'A strong topical painkiller for eyes, decreases ocular swelling, itching, and discomfort rapidly.',
+        'dosage' => 'Instill 1-2 drops in the affected eye(s) 3-4 times a day or as directed by the eye specialist.',
+        'packaging' => '5 ml Dropper Bottle',
+        'disclaimer' => 'Warning: Ophthalmic use only. Do not touch the dropper tip to any surface.',
+        'description' => 'A premium, sterile ophthalmic solution that effectively relieves ocular pain, burning, and inflammation.'
+    ],
+    13 => [
+        'id' => 13,
+        'name' => 'Joint Guard',
+        'slug' => 'joint-guard',
+        'category' => 'Joint Care / Nutraceutical',
+        'composition' => 'Glucosamine Sulfate 750mg + Chondroitin Sulfate 100mg + Methylsulfonylmethane (MSM) 250mg Tablets',
+        'indications' => 'Osteoarthritis, chronic joint pain, knee stiffness, cartilage degradation, and sports-related joint injuries.',
+        'benefits' => 'Supports healthy cartilage regeneration, restores joint cushioning, reduces stiffness, and enhances flexibility.',
+        'dosage' => '1 tablet twice daily after meals, recommended for at least 3 months.',
+        'packaging' => '10 x 10 Tablets in a Box (Alu-Alu Pack)',
+        'disclaimer' => 'Warning: Not recommended for individuals with seafood allergies (glucosamine source).',
+        'description' => 'A synergistic joint care formula containing essential elements to reconstruct connective tissues and preserve joint mobility.'
+    ],
+    14 => [
+        'id' => 14,
+        'name' => 'Mupus',
+        'slug' => 'mupus',
+        'category' => 'Topical Antibiotic',
+        'composition' => 'Mupirocin 2.0% w/w Ointment',
+        'indications' => 'Bacterial skin infections such as impetigo, folliculitis, furunculosis, and minor cuts, wounds, or grazes that are infected.',
+        'benefits' => 'Highly effective topical treatment targeting Gram-positive bacteria including MRSA, with quick localized action.',
+        'dosage' => 'Clean the area and apply a small amount 2-3 times daily for up to 10 days.',
+        'packaging' => '5g / 10g Lami Tube',
+        'disclaimer' => 'Warning: For external use only. Avoid contact with eyes.',
+        'description' => 'A premium topical antibacterial ointment that prevents bacterial replication and accelerates skin healing.'
+    ]
+];

@@ -1,0 +1,17 @@
+# IDE / Editor configuration folders
+.vscode/
+.idea/
+.gemini/
+.agents/
+.git/
+
+# OS generated files
+Thumbs.db
+EHthumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary files and logs
+*.log
+tmp/
+temp/
