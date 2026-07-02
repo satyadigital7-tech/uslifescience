@@ -74,26 +74,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const enquiryForm = document.getElementById('enquiryForm');
     const formMessage = document.getElementById('formMessage');
 
-    // Function to reload CSRF token and captcha math fields
-    function reloadCaptcha() {
+    // Function to load CSRF token
+    function loadCSRFToken() {
         if (!enquiryForm) return;
         fetch('php/get-captcha.php')
             .then(res => res.json())
             .then(data => {
                 const csrfInput = enquiryForm.querySelector('input[name="csrf_token"]');
-                const num1Span = document.getElementById('captchaNum1');
-                const num2Span = document.getElementById('captchaNum2');
-                
                 if (csrfInput) csrfInput.value = data.csrf_token;
-                if (num1Span) num1Span.innerText = data.num1;
-                if (num2Span) num2Span.innerText = data.num2;
             })
-            .catch(err => console.error('Error fetching captcha:', err));
+            .catch(err => console.error('Error fetching security token:', err));
     }
 
     // Call onload
     if (enquiryForm) {
-        reloadCaptcha();
+        loadCSRFToken();
     }
 
     if (enquiryForm) {
@@ -113,10 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.getElementById('email').value.trim();
             const subject = document.getElementById('subject').value.trim();
             const message = document.getElementById('message').value.trim();
-            const captcha = document.getElementById('captcha').value.trim();
             
-            if (!name || !phone || !email || !subject || !message || !captcha) {
-                showFormMessage('All fields, including captcha, are required.', 'error');
+            if (!name || !phone || !email || !subject || !message) {
+                showFormMessage('All fields are required.', 'error');
                 return;
             }
 
@@ -161,8 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     showFormMessage(data.message, 'success');
                     enquiryForm.reset();
                     
-                    // Reload fresh CSRF and math captcha from backend
-                    reloadCaptcha();
+                    // Reload fresh CSRF token from backend
+                    loadCSRFToken();
                 } else {
                     showFormMessage(data.message, 'error');
                 }

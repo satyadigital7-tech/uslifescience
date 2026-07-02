@@ -56,6 +56,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--dark-text);
     font-weight: 700;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 p {
@@ -339,8 +341,8 @@ header.sticky {
 .hero {
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(135deg, rgba(240, 246, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%), 
-                url('../images/hero/background-placeholder.svg') no-repeat center center/cover;
+    background: linear-gradient(135deg, rgba(240, 246, 255, 0.85) 0%, rgba(255, 255, 255, 0.9) 100%), 
+                url('../images/hero/hero-bg.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     position: relative;
@@ -541,6 +543,23 @@ header.sticky {
     align-items: center;
 }
 
+.about-split.reversed {
+    grid-template-columns: 0.9fr 1.1fr;
+}
+
+.about-split.reversed .about-text {
+    order: 2;
+}
+
+.about-split.reversed .about-image-wrapper {
+    order: 1;
+}
+
+.about-text h2 {
+    font-size: 2.3rem;
+    margin-bottom: 24px;
+}
+
 .about-text h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
@@ -552,10 +571,19 @@ header.sticky {
     font-size: 1.05rem;
 }
 
+.about-text p:first-of-type {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.about-text p:last-of-type {
+    margin-bottom: 30px;
+}
+
 .mission-vision-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 30px;
     margin-top: 40px;
 }
 
@@ -564,7 +592,7 @@ header.sticky {
     padding: 30px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-sm);
-    border-top: 4px solid var(--primary-blue);
+    border-top: 5px solid var(--primary-blue);
     transition: all var(--transition-speed) ease;
 }
 
@@ -578,7 +606,7 @@ header.sticky {
 }
 
 .mv-card i {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 20px;
 }
 
@@ -587,11 +615,13 @@ header.sticky {
 
 .mv-card h4 {
     font-size: 1.25rem;
+    margin-top: 10px;
     margin-bottom: 12px;
 }
 
 .mv-card p {
     font-size: 0.95rem;
+    margin-top: 8px;
 }
 
 .about-image-wrapper {
@@ -641,6 +671,12 @@ header.sticky {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.experience-badge.badge-right {
+    left: auto;
+    right: -30px;
+    background: linear-gradient(135deg, var(--medical-green), var(--primary-blue));
 }
 
 /* Therapeutic Areas */
@@ -986,6 +1022,7 @@ header.sticky {
 .contact-item-text a {
     font-size: 0.95rem;
     color: var(--muted-text);
+    word-break: break-all;
 }
 
 .contact-item-text a:hover {
@@ -1198,6 +1235,10 @@ footer {
     gap: 16px;
 }
 
+.footer-contact-info a {
+    word-break: break-all;
+}
+
 .footer-contact-info li {
     display: flex;
     gap: 12px;
@@ -1352,6 +1393,7 @@ footer {
 .breadcrumbs {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 8px;
     font-size: 0.9rem;
     font-weight: 500;

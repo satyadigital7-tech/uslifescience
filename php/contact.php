@@ -24,11 +24,7 @@ if (!isset($_POST['csrf_token']) || !isset($_SESSION['csrf_token']) || $_POST['c
     exit;
 }
 
-// 2. Math Captcha Verification
-if (!isset($_POST['captcha']) || !isset($_SESSION['captcha_answer']) || intval($_POST['captcha']) !== intval($_SESSION['captcha_answer'])) {
-    echo json_encode(['status' => 'error', 'message' => 'Incorrect math captcha security answer.']);
-    exit;
-}
+// 2. Math Captcha Verification Bypassed (Removed by User Request)
 
 // 3. Input Sanitization & Retrieval
 $name = isset($_POST['name']) ? trim(htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8')) : '';
@@ -144,8 +140,6 @@ $mailSubject = "Website Enquiry: " . $subject;
 $isSent = sendEnquiryMail($recipient, $mailSubject, $htmlBody, $textBody, $name, $email);
 
 if ($isSent) {
-    // Generate new captcha answer in session to prevent reuse
-    $_SESSION['captcha_answer'] = rand(2, 9) + rand(2, 9);
     echo json_encode(['status' => 'success', 'message' => 'Thank you! Your enquiry has been sent successfully. We will get back to you shortly.']);
 } else {
     echo json_encode(['status' => 'error', 'message' => 'Failed to send your email. Please try again later or email us directly.']);

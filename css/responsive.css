@@ -51,6 +51,11 @@
         gap: 50px;
     }
     
+    .about-split.reversed .about-text,
+    .about-split.reversed .about-image-wrapper {
+        order: 0;
+    }
+    
     .about-image-wrapper {
         max-width: 500px;
         margin: 0 auto;
@@ -100,6 +105,10 @@
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
     header {
         padding: 15px 0;
     }
@@ -124,7 +133,8 @@
         box-shadow: var(--shadow-lg);
         flex-direction: column;
         justify-content: center;
-        gap: 30px;
+        align-items: stretch;
+        gap: 20px;
         transition: right 0.4s ease;
         padding: 40px;
         z-index: 1000;
@@ -132,6 +142,17 @@
     
     .nav-menu.active {
         right: 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-menu li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
     }
     
     .nav-actions {
@@ -184,10 +205,20 @@
         gap: 0;
     }
     
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
     .experience-badge {
         padding: 20px;
         bottom: -20px;
-        left: -10px;
+        left: 15px;
+    }
+    
+    .experience-badge.badge-right {
+        left: auto;
+        right: 15px;
     }
     
     .experience-badge .num {
@@ -215,6 +246,10 @@
         font-size: 1.3rem;
     }
     
+    .inner-banner {
+        padding: 100px 0 50px 0;
+    }
+    
     .inner-banner h1 {
         font-size: 2.2rem;
     }
@@ -222,9 +257,17 @@
     .product-detail-actions {
         flex-direction: column;
     }
+    
+    .legal-content {
+        padding: 24px 16px;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    
     .hero h1 {
         font-size: 2rem;
     }
