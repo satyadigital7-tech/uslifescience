@@ -108,6 +108,12 @@ ul {
     animation: fadeInUp 0.8s forwards ease;
 }
 
+.loader-logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
 .loader-logo i {
     font-size: 3rem;
     color: var(--primary-blue);
